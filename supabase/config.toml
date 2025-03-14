@@ -160,6 +160,15 @@ otp_expiry = 3600
 # admin_email = "admin@email.com"
 # sender_name = "Admin"
 
+[auth.email.smtp]
+enabled = true
+host = "email-smtp.us-east-1.amazonaws.com"
+port = 587
+user = "env(AWS_SMTP_USERNAME)"
+pass = "env(AWS_SMTP_PASSWORD)"
+admin_email = "env(AWS_SMTP_EMAIL)"
+sender_name = "test"
+
 # Uncomment to customize email template
 # [auth.email.template.invite]
 # subject = "You have been invited"
